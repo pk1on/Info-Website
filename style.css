@@ -2,3 +2,9 @@
     font-size: larger;
     align-self: center ;
 }
+
+.div1{
+    align-content: center;
+    height:95%;
+    width: 100%;
+}
