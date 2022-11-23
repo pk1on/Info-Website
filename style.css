@@ -1,10 +1,30 @@
-.th{
-    font-size: larger;
-    align-self: center ;
+body    {
+    background-color:white);
+    font-family: Impact, fantasy;
+}
+header{
+    background-color: rgb(35, 82, 151);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 15%;
+    width: 100%;
+    color: white;
+    display: flex;
+    font-weight: 10;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    font-size: 250%;
+}
+h1
+{
+    font-weight: 10;
 }
 
-.div1{
-    align-content: center;
-    height:95%;
-    width: 100%;
+#logo
+{
+    height: 90%;
 }
+
