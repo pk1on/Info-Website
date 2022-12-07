@@ -12,76 +12,42 @@ header{
     color: white;
     display: flex;
     font-weight: 10;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    
     gap: 10%;
     
 }
-h1
-{
+h1{
     font-weight: 10;
     font-size: 5vw;
-    margin-right: 10%;
 }
+h2{
+    font-weight: normal;
+    font-size: 250%;
+    text-decoration: underline;
+    
+}
+h3{
+    font-weight: normal;
+    font-size: 200%;
+}   
 
 #logo
 {
     height: 90%;
 }
-
-
-#blur
-{
-    background-color: rgba(0, 0, 0, 0.7);;
-    height: 100%;
+#content{
+    
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top: 15%;
     width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-}
-
-#nav
-{
-    height: 100%;
-    width: 12%;
-    background-color: rgb(35, 82, 151);
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    opacity: 1;
+    height: unset;
+    left:0%;
+    background-image: url(blackboard.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    padding-left: 0.7%;
- 
+    align-items: center;
 }
 
-details
-{
-    margin: 5%;
-    color: white;
-    font-size: 1vw;
-}
-
-#navToggle
-{
-
-    background-image: url("hamburger_logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 10%;
-    aspect-ratio: 1/1;
-    position: absolute;
-    top: 3.4%;
-    left: 94%;
-}
-
-.navLink
-{
-    color: white;
-}
-
-.linkList
-{
-    font-size: 1vw;
-}
