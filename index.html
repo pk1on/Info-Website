@@ -16,5 +16,58 @@
     </header>
     </a>
 
+    <!--Content start-->
+
+
+
+
+    <!--Content end-->
+
+    <div id="blur">
+      <div id="nav">
+        <nav>
+          <h3 style="color: white; font-size: 2vw;">Menu</h3>
+          <details>
+            <summary>Startseite</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="index.html" class="navLink">Homepage</a></li>
+            </ul>
+          </details> 
+
+          <details>
+            <summary>Unterricht</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="faecher.html" class="navLink">Faecher</a></li>
+              <li class="linkList"><a href="lehrer.html" class="navLink">Lehrer</a></li>
+            </ul>
+          </details> 
+
+        
+      </div>
+    </div>
+    <div id="navToggle" onclick="toggleNav();">
+      
+    </div>
+    <script>
+      const blur = document.getElementById("blur");
+      const navToggle = document.getElementById("navToggle");
+      let navOpen = true;
+      toggleNav();
+      function toggleNav()
+      {
+        if (navOpen)
+        {
+          blur.style.visibility = "hidden";
+          navToggle.style.backgroundImage = "url('hamburger_logo.png')";
+          navOpen = false;
+        }
+        else
+        {
+          blur.style.visibility = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo_open.png')";
+          navOpen = true;
+        }
+      }
+    </script>
   </body>
 </html>
