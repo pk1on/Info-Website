@@ -85,22 +85,3 @@ details
 {
     font-size: 1vw;
 }
-#content{
-    
-    color:rgb(255, 255, 255);
-    position: absolute;
-    top: 15%;
-    width: 100%;
-    height:75;
-    left:0%;
-    background-image: url(blackboard.jpg);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-a{
-    color:white;
-    text-decoration: none;
-}
