@@ -2,6 +2,7 @@ body    {
     font-family: Impact, fantasy;
     padding: 0;
     background-color: rgb(247, 243, 228);
+    color: black; 
 }
 
 header{
