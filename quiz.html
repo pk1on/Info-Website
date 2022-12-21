@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">  
+        <meta name="author" content="Jonas k; Jonas m; Adrian; Lasse;">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+        <title>Website des LGG</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            h2 {font-size: 220%;}
+            .defaultParagraph {font-size: 135%;}
+            .inputSection
+            {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                flex-direction: row;
+            }
+            .inputContainer
+            {
+                background-color: aquamarine;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                border-radius: 10px;
+                background-color: rgb(127, 151, 187);
+                padding: 3px;
+
+            }
+            .inputName
+            {
+              margin-left: 5px;
+              font-size: 120%;
+            }
+            button
+            {
+              background-color: rgb(35, 82, 151);
+              color: white;
+              border-radius: 10px;
+              height: 30%;
+              font-size: 130%;
+              margin: 5px;
+              margin-top: 20px;
+              font-weight: bold;
+            }
+        </style>
+  </head>
+  <body>
+    <a href="index.html">
+      <header>
+          <img src="logo.png" id="logo">
+          <h1>Ludwig-Georgs-Gymnasium</h1>
+      </header>
+    </a>
+    <div id="content">
+      <!--Content start-->
+      <h2>Der LGG-Test</h2>
+      <p class="defaultParagraph">Gib deine Interessen auf einer Skala von 0 (kein Interesse) bis 10 (volles Interesse)</p>
+      <div class="inputSection">
+          <div class="inputContainer">
+              <p class="inputName">
+                Ausgestorbene Sprachen (<b id="i1Output">5</b>)&nbsp; 
+              </p>
+              <input type="range" min="0" max="10" id="i1" oninput="change(this);" onchange="change(this);">
+              <p>
+                  
+              </p>
+          </div>
+          <div class="inputContainer">
+            	<p class="inputName">
+            	  Betagte Architektur (<b id="i2Output">5</b>)&nbsp; 
+            	</p>
+            	<input type="range" min="0" max="10" id="i2" oninput="change(this);" onchange="change(this);">
+            	<p>
+            	    
+            	</p>
+          </div>
+          <div class="inputContainer">
+            <p class="inputName">
+              Schulumzüge (<b id="i3Output">5</b>)&nbsp; 
+            </p>
+            <input type="range" min="0" max="10" id="i3" oninput="change(this);" onchange="change(this);">
+          </div>
+        <div class="inputContainer">
+          <p class="inputName">
+            Moderne Technik (<b id="i4Output">5</b>)&nbsp; 
+          </p>
+          <input type="range" min="0" max="10" id="i4" oninput="change(this);" onchange="change(this);">
+          <p>
+              
+          </p>
+       </div>
+       <div class="inputContainer">
+         <p class="inputName">
+            Wasser (<b id="i5Output">5</b>)&nbsp; 
+        </p>
+        <input type="range" min="0" max="10" id="i5" oninput="change(this);" onchange="change(this);">
+      </div>
+      
+      </div>
+      <button onclick="evaluateData()" id="btn">Ergebnis</button>
+      
+      <p id="result" class="defaultParagraph"></p>
+      <!--Content end-->
+      
+      <footer>
+        <p>© Adrian, Jonas, Jonas, Lasse; Diese Unterseite wurde erstellt von &nbsp</p>
+        <!-- Name: --><i>Jonas K.</i>
+        <p>; <a href="base.html">Base</a> von Jonas K.</p>
+       </footer>
+    </div>
+
+    <div id="blur">
+      <div id="nav">
+        <nav>
+          <h3 style="color: white; font-size: 1.6vw;">Menu</h3>
+          <details open>
+            <summary>Startseite</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="index.html" class="navLink">Homepage</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Unterricht</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="faecher.html" class="navLink">Faecher</a></li>
+              <li class="linkList"><a href="faecher1.html" class="navLink">Fachbereich 1</a></li>
+              <li class="linkList"><a href="faecher2.html" class="navLink">Fachbereich 2</a></li>
+              <li class="linkList"><a href="faecher3.html" class="navLink">Fachbereich 3</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Personal</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="lehrer.html" class="navLink">Lehrer</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Sonstiges</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="quiz.html" class="navLink">Das LGG-Quiz</a></li>
+              <li class="linkList"><a href="building.html" class="navLink">Das Schulgelände</a></li>
+            </ul>
+          </details> 
+      </div>
+    </div>
+    <div id="navToggle" onclick="toggleNav();"></div>
+    <script>
+      const blur = document.getElementById("blur");
+      const navToggle = document.getElementById("navToggle");
+      let navOpen = true;
+      toggleNav();
+      function toggleNav()
+      {
+        if (navOpen)
+        {
+          blur.style.visibility = "hidden";
+          blur.style.opacity = "0";
+          document.body.style.overflow = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo.png')";
+          navOpen = false;
+        }
+        else
+        {
+          blur.style.visibility = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo_open.png')";
+          window.scrollTo(0,0);
+          document.body.style.overflow = "hidden";
+          blur.style.opacity = "1";
+          navOpen = true;
+        }
+      }
+
+
+      //Quiz
+
+      let inputData = [5,5,5,5,5];
+
+      function change(obj) 
+      {
+          document.getElementById(obj.id + "Output").textContent = obj.value; //Change text
+          inputData[obj.id[1]-1] = parseInt(obj.value); //Save Input
+      }
+
+      function evaluateData()
+      {
+          let result = "Dein Ergebnis: Du solltest unbedingt aufs LGG kommen! Warum? Nun ja, erstens scheinst du dich allgemein ";
+
+          //Put together result blocks
+          if (inputData[0]+inputData[1]>10)
+          {
+              result += "für historische Dinge zu interessiern, das passt perfekt zu Darmstadts ältestem Gymnasium! "
+          }
+          else
+          {
+              result += "nicht wirklich für historische Dinge zu interessieren. Ein Blick über den eigenen Horizont ist bei dir also ganz sicher nicht schlecht. Was würde sich dafür besser eignen als der Besuch von Darmstadts ältestem Gymnasium? ";
+          }
+
+          if (inputData[2]>=5)
+          {
+              result += "Auch ziehst du gerne mit deiner Schule um. Welch glücklicher Zuall, dass dir selbst dieser Wunsch am LGG erfüllt werden kann! ";
+          }
+
+          
+          if (inputData[3]>=5)
+          {
+              result += "Zudem magst du moderne Technik? Nicht ganz ungefährlich! Um ein wenig Detox zu betreiben ist das LGG mit seiner fast manchmal funktionierenden Technik prädestiniert. ";
+          }
+          else
+          {
+              result += "Zudem kannst du nicht viel mit Technik anfangen? Super, da ist das LGG mit seiner fast manchmal funktionierenden Technik prädestiniert. "
+          }
+
+          if (inputData[4]>=5)
+          {
+              result += "Weiterhin scheint dir Wasser gut zu gefallen, die Konsequenz ist klar: Das LGG verfügt über eine ausergewöhnlich Fähigkeit, Wasserschäden in großer Menge genießen zu dürfen (Erst kürzlich wurde daher der Oberstufenraum abgeschafft, wer braucht den schon?). Das LGG ist also quasi Pflicht für dich! ";
+          }
+          else
+          {
+              result += "Weiterhin scheinst du kein großer Wasserfan zu sein, nicht begeistert von dem Element, das dein Leben ermöglicht. Dass das eine Lüge sein muss sollte dir selbst klar sein, in Wahrheit magst du Wasser sogar sehr und die Konsequenz ist klar: Das LGG verfügt über eine ausergewöhnlich Fähigkeit, Wasserschäden in großer Menge genießen zu dürfen (Erst kürzlich wurde daher der Oberstufenraum abgeschafft, wer braucht den schon?). Das LGG ist also quasi Pflicht für dich! "
+          }
+          result += "Wenn du jetzt noch zweifelst, kann dir wohl niemand mehr helfen. Wir freuen uns also über deine Anmeldung zum nächsten Schuljahr!";
+
+          document.getElementById("result").innerHTML = result;
+
+          document.getElementById("btn").textContent = "Ergebnis aktualisieren";
+      }
+    </script>
+  </body>
+</html>
