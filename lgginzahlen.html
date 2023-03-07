@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">  
+        <meta name="author" content="Jonas k; Jonas m; Adrian; Lasse;">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+        <title>Website des LGG</title>
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html">
+      <header>
+          <img src="logo.png" id="logo">
+          <h1>Ludwig-Georgs-Gymnasium</h1>
+      </header>
+    </a>
+    <div id="content">
+      <!--Content start-->
+      
+      <p class="textÜberschrift" >
+
+      Das LGG in Zahlen <br> <br>
+      
+      </p>
+      <p class="textUnterschrift" >
+      
+      ca. 735 Schüler <br><br>
+      ca. 67 Lehrer <br><br>
+      1629 gegründet <br><br>
+      Bereits von über 134 berühmten Personen besucht worden <br><br>
+      Gegründet vor ca. 143445 Tagen <br><br> 
+
+    </p>
+
+      <!--Content end-->
+     
+      <footer>
+        <p>© Adrian, Jonas, Jonas, Lasse; Diese Unterseite wurde erstellt von Lasse&nbsp</p>
+        <!-- Name: --><i></i>
+        <p>; <a href="base.html">Base</a> von Jonas K.</p>
+       </footer>
+    </div>
+
+    <div id="blur">
+      <div id="nav">
+        <nav>
+          <h3 style="color: white; font-size: 1.6vw;">Menu</h3>
+          <details open>
+            <summary>Startseite</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="index.html" class="navLink">Homepage</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Unterricht</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="faecher.html" class="navLink">Faecher</a></li>
+              <li class="linkList"><a href="fächer1.html" class="navLink">Fachbereich 1</a></li>
+              <li class="linkList"><a href="fächer2.html" class="navLink">Fachbereich 2</a></li>
+              <li class="linkList"><a href="fächer3.html" class="navLink">Fachbereich 3</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Personal</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="lehrer.html" class="navLink">Lehrer</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Sonstiges</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="quiz.html" class="navLink">Das LGG-Quiz</a></li>
+              <li class="linkList"><a href="building.html" class="navLink">Das Schulgelände</a></li>
+              <li class="linkList"><a href="geschichte.html" class="navLink">Geschichte</a></li>
+              <li class="linkList"><a href="lgginzahlen.html" class="navLink">Das LGG in Zahlen</a></li>
+              <li class="linkList"><a href="logo.html" class="navLink">Das Logo</a></li>
+            </ul>
+          </details> 
+      </div>
+    </div>
+    <div id="navToggle" onclick="toggleNav();"></div>
+    <script>
+      const blur = document.getElementById("blur");
+      const navToggle = document.getElementById("navToggle");
+      let navOpen = true;
+      toggleNav();
+      function toggleNav()
+      {
+        if (navOpen)
+        {
+          blur.style.visibility = "hidden";
+          blur.style.opacity = "0";
+          document.body.style.overflow = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo.png')";
+          navOpen = false;
+        }
+        else
+        {
+          blur.style.visibility = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo_open.png')";
+          window.scrollTo(0,0);
+          document.body.style.overflow = "hidden";
+          blur.style.opacity = "1";
+          navOpen = true;
+        }
+      }
+    </script>
+  </body>
+</html>

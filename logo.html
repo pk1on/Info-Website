@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">  
+        <meta name="author" content="Jonas k; Jonas m; Adrian; Lasse;">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+        <title>Website des LGG</title>
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html">
+      <header>
+          <img src="logo.png" id="logo">
+          <h1>Ludwig-Georgs-Gymnasium</h1>
+      </header>
+    </a>
+    <div id="content">
+      <!--Content start-->
+      <table border="0" style="width: 100%" cellspacing="20">
+        <tr>
+          <td height="40%" width="50%">
+            <p class="textÜberschrift">Das Logo</p>
+            <p class="textInhalt">Das Logo des Ludwig Georgs Gymnasiums, des großartigsten und besten Gymnasiums Hessens, vielleicht sogar Deutschlands, zeigt eine Eule, einen Zweig mit Blättern und 3 Buchstaben; Auch wenn viele glauben, die drei Buchstaben "AOE" würden etwas altgrieschisches bedeuten, kommen die meisten Wissenschaftler zum Schluss, dass "AOE" für "Aspect of the End", einer berüchtigten Waffe aus Hypixel Skyblock, steht.</p>
+          </td>
+          <td height="40%" width="50%">
+            <a href="https://www.apprendre-a-dessiner.org/forums/reply/62812/funny-owls-11/"><img src="Eulefunny1.png" width="100%" alt="lustige Eule"></a>
+          </td>
+        </tr>
+        <tr>
+          <td height="40%" width="50%">
+            <a href="https://i.pinimg.com/originals/6b/45/a6/6b45a6d7f070b8730ac488fe3be81b85.jpg"><img src="Eulefunny2.png" width="100%" alt="lustige Eule"></a>
+          </td>
+          <td height="40%" width="50%">
+            <p class="textInhalt">Hobbyastrologen behaupten, die Eule referenziere die Eule der Athene, die grieschische Göttin des guten Mobilfunkempfangs, und würde deswegen für Weisheit stehen. Es ist aber weitgehend anerkannt, dass die Eule stattdessen das Logo des Ludwig Georgs Gymnasiums prägt, da die Gründer sie lustig fanden.</p>
+          </td>
+        </tr>
+
+      </table>
+        <!--Content end-->
+     
+      <footer>
+        <p>© Adrian, Jonas, Jonas, Lasse; Diese Unterseite wurde erstellt von &nbsp</p>
+        <!-- Name: --><i>Jonas</i>
+        <p>; <a href="base.html">Base</a> von Jonas K.</p>
+       </footer>
+    </div>
+
+    <div id="blur">
+      <div id="nav">
+        <nav>
+          <h3 style="color: white; font-size: 1.6vw;">Menu</h3>
+          <details open>
+            <summary>Startseite</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="index.html" class="navLink">Homepage</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Unterricht</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="faecher.html" class="navLink">Faecher</a></li>
+              <li class="linkList"><a href="fächer1.html" class="navLink">Fachbereich 1</a></li>
+              <li class="linkList"><a href="fächer2.html" class="navLink">Fachbereich 2</a></li>
+              <li class="linkList"><a href="fächer3.html" class="navLink">Fachbereich 3</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Personal</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="lehrer.html" class="navLink">Lehrer</a></li>
+            </ul>
+          </details> 
+
+          <details open>
+            <summary>Sonstiges</summary>
+            <ul class="linkList">
+              <li class="linkList"><a href="quiz.html" class="navLink">Das LGG-Quiz</a></li>
+              <li class="linkList"><a href="building.html" class="navLink">Das Schulgelände</a></li>
+              <li class="linkList"><a href="geschichte.html" class="navLink">Geschichte</a></li>
+              <li class="linkList"><a href="lgginzahlen.html" class="navLink">Das LGG in Zahlen</a></li>
+              <li class="linkList"><a href="logo.html" class="navLink">Das Logo</a></li>
+            </ul>
+          </details> 
+      </div>
+    </div>
+    <div id="navToggle" onclick="toggleNav();"></div>
+    <script>
+      const blur = document.getElementById("blur");
+      const navToggle = document.getElementById("navToggle");
+      let navOpen = true;
+      toggleNav();
+      function toggleNav()
+      {
+        if (navOpen)
+        {
+          blur.style.visibility = "hidden";
+          blur.style.opacity = "0";
+          document.body.style.overflow = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo.png')";
+          navOpen = false;
+        }
+        else
+        {
+          blur.style.visibility = "visible";
+          navToggle.style.backgroundImage = "url('hamburger_logo_open.png')";
+          window.scrollTo(0,0);
+          document.body.style.overflow = "hidden";
+          blur.style.opacity = "1";
+          navOpen = true;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+body    {
+    font-family: Impact, fantasy;
+    padding: 0;
+    background-color: rgb(247, 243, 228);
+    color: black; 
+}
+
+header{
+    background-color: rgb(35, 82, 151);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 15vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    font-weight: 10;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;  
+    z-index: 2; 
+}
+
+footer
+{
+   position: relative;
+    height: 4vh;
+   border-top: 3px solid black;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+#content
+{
+    min-height: 78vh;
+    position: relative;
+    top: 15vh;
+    
+}
+
+.flex
+{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: row;
+}
+
+h1
+{
+    font-weight: 10;
+    font-size: 5vw;
+    margin-right: 10%;
+}
+
+#logo
+{
+    height: 90%;
+}
+
+
+#blur
+{
+    background-color: rgba(0, 0, 0, 0.7);;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+#nav
+{
+    height: 100vh;
+    width: 12%;
+    background-color: rgb(35, 82, 151);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.7%;
+    padding-top: 15vh;
+    z-index: 3;
+}
+
+details
+{
+    margin: 5%;
+    color: white;
+    font-size: 1vw;
+}
+
+#navToggle
+{
+
+    background-image: url("hamburger_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10%;
+    aspect-ratio: 1/1;
+    position: fixed;
+    top: 3.4%;
+    left: 94%;
+    z-index: 3;
+}
+
+.navLink
+{
+    color: white;
+}
+
+.linkList
+{
+    font-size: 1vw;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    padding: 0;
+}
+
+::-webkit-scrollbar 
+{
+  width: 20px;
+}
+
+::-webkit-scrollbar-track 
+{
+  background: rgb(247, 243, 228); 
+    border-left: 6px solid black;
+}
+ 
+::-webkit-scrollbar-thumb 
+{
+  background: rgb(35, 82, 151); 
+  border-left: 6px solid black;
+  
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  background: rgb(18, 60, 122); 
+}
+
+.column-
+{
+    padding: 0%;
+}
+
+.column-2
+{
+    font-size: 1.5vw;
+    padding: 2vw;
+    padding-right: 0%;
+}
+
+.column-3
+{
+    font-size: 1.5vw;
+    padding: 2vw;
+    padding-right: 0%;
+}
+
+.column-4
+{
+    font-size: 1.5vw;
+    padding: 2vw;
+    padding-right: 0%;
+}
+
+.column-5
+{
+    font-size: 1.5vw;
+    padding: 2vw;
+    padding-right: 0%;
+}
+
+.odd
+{
+    background: rgb(224, 220, 206); 
+}
+
+#suchfeld
+{
+    width: 90%;
+    padding: 12px;
+    margin: 1vw;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+
+
+#suchfeld:focus
+{
+    border: 3px solid rgb(31, 31, 31);
+    outline: none;
+    padding: 10px;
+}
+
+#fä
+{
+    color:rgb(255, 255, 255);
+    top: 15%;
+    width: 100%;
+    height:75;
+    left:0%;
+    background-image: url(blackboard.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.l
+{
+    color:white;
+    text-decoration: none;
+}
+
+#ch
+{
+    width: 100%;
+}
+
+.textÜberschrift
+{
+    font-size: 2.5vw;
+}
+
+.textUnterschrift
+{
+    font-size: 2vw;
+}
+
+.textInhalt
+{
+    font-size: 1.5vw;
+}
